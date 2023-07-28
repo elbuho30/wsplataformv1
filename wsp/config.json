@@ -1,0 +1,38 @@
+{
+    "HttpPort": 8100,
+    "user": "crm_cpioxii",
+    "password": "raul123.",
+    "server": "10.1.0.187\\SQLSERVER",
+    "port":"1433",
+    "database": "CRM",
+    "requestTimeout": 80000,
+    "options": {
+        "useUTC": true,
+        "encrypt": false
+ },
+    "ssl": {
+        "use": true,
+        "selfsigned": true
+    },
+
+    "pool": {
+        "max": 100,
+        "min": 50,
+        "idleTimeoutMillis": 30000
+    },
+
+    "env": "dev",
+    "emailConfig": {
+        "host": "smtp.gmail.com",
+        "port": 465,
+        "secure": true,
+        "user": "pioxiiapp@gmail.com",
+        "pass": "yaqtwmvppwuycbsz"
+    },
+
+    "module.exports": {
+        "TOKEN_SECRET": "process.env.TOKEN_SECRET"
+    }
+    
+}
+

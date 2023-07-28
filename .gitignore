@@ -13,3 +13,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/wsp/node_modules/*.*
+/wsp/node_modules/
+/wsp/node_modules
+/wsp/.vscode
+wsp/message.txt
+/wsp/message.txt
