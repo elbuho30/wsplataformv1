@@ -14,6 +14,7 @@ var bodyParser = require("body-parser");
 var Cryptr = require("cryptr");
 const enviarmail = require("./enviarmail.js");
 const { Int } = require("mssql");
+const { env } = require("process");
 
 // sql.connect(config).then(function(model) {
 // emailGenerator = emailGenerator(config.emailConfig);
@@ -153,7 +154,7 @@ router.post("/webhook", function (req, res) {
     var headers = {
         'User-Agent': 'Super Agent/0.0.1',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer EAAK8GEurg6EBAJ4e3BC8rHAaoYqw8AkrpBbINW54zc4tBZCrC4vfO0rU2aukVhJVvd8Qqh9GWfAw3Qi50sALPsMg9Ntm50bTsAdIEMOauCVxd1p6S2QOHaZCgONZCThyljSKp1buljzbGnF6VsdDhnuE0hZAWqUGvW1qZBC6ZAPaOZButPLBMHaGYkZAHg0qnLf0d6zyMV33rgZDZD'
+        'Authorization': env('META_TOKEN')
     }
 
 
@@ -233,7 +234,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
             "\nSelecciona la opción correspondiente en cada uno de los pasos. Podrás terminar el proceso en cualquier momento escribiendo 'salir' o Volver al menú inicial escribiendo 'inicio o menú.' "
 
         var options1 = {
-            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
             method: 'POST',
             JSON: true,
             headers: headers,
@@ -326,7 +327,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
             "\n¿aceptas nuestras políticas?"
 
             var options1 = {
-                url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                 method: 'POST',
                 JSON: true,
                 headers: headers,
@@ -413,7 +414,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
             var message = "Ingresa a nuestra sucursal virtual, podrás realizar consulta de saldos, consultar transacciones y realizar pagos a tus productos de ahorro y crédito. aquí https://bit.ly/3mgcBQM  🖥️"
 
             var options1 = {
-                url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                 method: 'POST',
                 JSON: true,
                 headers: headers,
@@ -466,7 +467,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
             var message = "Ingresa a nuestra App Asociados, podrás realizar consulta de saldos, movimientos y realizar pagos a tus productos de ahorro y crédito. descárgala para Android aquí https://bit.ly/3pXCshr y para IOS aquí https://apple.co/3w2JTWS "
 
             var options1 = {
-                url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                 method: 'POST',
                 JSON: true,
                 headers: headers,
@@ -655,7 +656,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
            
            
             var options1 = {
-                url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                 method: 'POST',
                 JSON: true,
                 headers: headers,
@@ -1323,7 +1324,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
                     {
                     if (store.get(from).data[15].indexOf("Antioquia") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -1421,7 +1422,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
 
                     if (store.get(from).data[15].indexOf("Bolivar") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -1557,7 +1558,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
 
                     if (store.get(from).data[15].indexOf("Bogotá") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -1629,7 +1630,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
 
                     if (store.get(from).data[15].indexOf("Sucre") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -1701,7 +1702,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
 
                     if (store.get(from).data[15].indexOf("Magdalena") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -1774,7 +1775,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
                 
                     if (store.get(from).data[15].indexOf("Guajira") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -1847,7 +1848,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
 
                     if (store.get(from).data[15].indexOf("Atlántico") >= 0) {
                         var options1 = {
-                            url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                            url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                             method: 'POST',
                             JSON: true,
                             headers: headers,
@@ -2318,7 +2319,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
 
 
                 var options1 = {
-                    url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                    url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                     method: 'POST',
                     JSON: true,
                     headers: headers,
@@ -2415,7 +2416,7 @@ if(store.get(from).data.length > 14 &&  store.get(from).data[10].indexOf("image"
                     var messageofi = "Selecciona el departamento..."
 
                     var options1 = {
-                        url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+                        url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
                         method: 'POST',
                         JSON: true,
                         headers: headers,
@@ -2547,13 +2548,13 @@ function peticioneswhatasapp(numero, mensaje) {
     var headers = {
         'User-Agent': 'Super Agent/0.0.1',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer EAAK8GEurg6EBAJ4e3BC8rHAaoYqw8AkrpBbINW54zc4tBZCrC4vfO0rU2aukVhJVvd8Qqh9GWfAw3Qi50sALPsMg9Ntm50bTsAdIEMOauCVxd1p6S2QOHaZCgONZCThyljSKp1buljzbGnF6VsdDhnuE0hZAWqUGvW1qZBC6ZAPaOZButPLBMHaGYkZAHg0qnLf0d6zyMV33rgZDZD'
+        'Authorization': env('META_TOKEN')
     }
 
 
 
     var options = {
-        url: 'https://graph.facebook.com/v16.0/101952046249631/messages',  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
+        url: env('URL_META'),  // 'http://localhost:3021/send?message=' + message + '&to=' + number,
         method: 'POST',
         JSON: true,
         headers: headers,
