@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "smpt-mail",
+        "scope": null,
+        "escapedName": "smpt-mail",
+        "name": "smpt-mail",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "G:\\Net\\ionic\\desarrollo\\fuentesappTeam\\sever_app_backend"
+    ]
+  ],
+  "_from": "smpt-mail@latest",
+  "_id": "smpt-mail@1.0.0",
+  "_inCache": true,
+  "_location": "/smpt-mail",
+  "_nodeVersion": "6.6.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/smpt-mail-1.0.0.tgz_1480161960271_0.258888901444152"
+  },
+  "_npmUser": {
+    "name": "tangshiqiang",
+    "email": "tangshiqiangcn@gmail.com"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {
+    "libmime": "3.0.0",
+    "mailcomposer": "4.0.1",
+    "nodemailer-direct-transport": "3.3.2",
+    "nodemailer-shared": "1.1.0",
+    "nodemailer-smtp-pool": "2.8.2",
+    "nodemailer-smtp-transport": "2.7.2",
+    "socks": "1.1.9"
+  },
+  "_requested": {
+    "raw": "smpt-mail",
+    "scope": null,
+    "escapedName": "smpt-mail",
+    "name": "smpt-mail",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/smpt-mail/-/smpt-mail-1.0.0.tgz",
+  "_shasum": "cc15c0dc0f7e62e1ab7e358cc4e2faead964eb2f",
+  "_shrinkwrap": null,
+  "_spec": "smpt-mail",
+  "_where": "G:\\Net\\ionic\\desarrollo\\fuentesappTeam\\sever_app_backend",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/tsq-happy/smpt-mail/issues"
+  },
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "nodemailer": "^2.6.4"
+  },
+  "description": "use smpt transport to send mail based on nodemailer",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "cc15c0dc0f7e62e1ab7e358cc4e2faead964eb2f",
+    "tarball": "https://registry.npmjs.org/smpt-mail/-/smpt-mail-1.0.0.tgz"
+  },
+  "gitHead": "00a07a6080e74f2d466daa17ab8601b8e98bc1ab",
+  "homepage": "https://github.com/tsq-happy/smpt-mail#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "tangshiqiang",
+      "email": "tangshiqiangcn@gmail.com"
+    }
+  ],
+  "name": "smpt-mail",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsq-happy/smpt-mail.git"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "version": "1.0.0"
+}
