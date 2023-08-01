@@ -23,7 +23,7 @@ class ParametrosCrudController extends CrudController
     {
         $this->crud->setModel('App\Models\Parametros');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/parametros');
-        $this->crud->setEntityNameStrings('parametro', 'parámetros');
+        $this->crud->setEntityNameStrings('parámetro', 'parámetros');
     }
 
     protected function setupListOperation()
