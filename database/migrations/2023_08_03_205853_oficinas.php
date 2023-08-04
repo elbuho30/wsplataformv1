@@ -16,8 +16,6 @@ class Oficinas extends Migration
         Schema::create('oficinas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('departamento');
-            $table->string('ciudad');
             $table->string('direccion')->label('Dirección');
             $table->string('direccion2');
             $table->string('telefono')->label('Teléfono');
