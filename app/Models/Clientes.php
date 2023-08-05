@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Doctrine\DBAL\Driver\API\SQLite\UserDefinedFunctions;
 use Illuminate\Database\Eloquent\Model;
 
 class Clientes extends Model
@@ -34,7 +35,9 @@ class Clientes extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
+    public function clientesUsuarios(){
+        return $this->belongsTo(User::class, 'user_id','id');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
