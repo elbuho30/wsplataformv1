@@ -72,7 +72,7 @@ return [
     // ------
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
-    'project_logo'   => '<b>Ws</b>Plataform',
+    'project_logo'   => '<b>WsP</b>lataform',
     // 'project_logo'   => '<img src="/img/logo-pio.png" width="45px"><b>CRM</b>&nbsp;COOPIO XII',
 
     // Show / hide breadcrumbs on admin panel pages.

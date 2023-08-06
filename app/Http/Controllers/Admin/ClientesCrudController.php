@@ -129,7 +129,7 @@ class ClientesCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         //$this->setupCreateOperation();
-
+    $entry = $this->crud->getCurrentEntry();
         CRUD::addField([
             'name' => 'nro_documento',
             'label' =>  'Nro. Documento',
@@ -153,6 +153,21 @@ class ClientesCrudController extends CrudController
             'label' =>  'Apellidos',
             'wrapper' => [
                 'class' => 'form-group col-md-3'
+            ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'direccion',
+            'label' => 'Dirección',
+            'type' => 'address_google',
+            'hint' => (!empty($entry) ? 
+                        (($entry->direccion)  ? 
+                        '<a href="https://www.google.com/maps/dir/?api=1&destination=' . $entry->direccion['latlng']['lat'] . ',' . $entry->direccion['latlng']['lng'] . '" target="_blank">Cómo llegar?</a>' 
+                        : '') 
+                        : ''),
+            'store_as_json' => true,
+            'wrapper' => [
+                'class' => 'form-group col-md-4'
             ],
         ]);
 
