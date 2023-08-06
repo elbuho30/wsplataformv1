@@ -124,7 +124,6 @@ class ClientesCrudController extends CrudController
 
         // TODO: remove setFromDb() and manually define Fields
         //$this->crud->setFromDb();
-        dump(env('MAPS_GOOGLE_MAPS_ACCESS_TOKEN'));
         $entry = $this->crud->getCurrentEntry();
         CRUD::addField([
             'name' => 'nro_documento',
