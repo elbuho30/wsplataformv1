@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cliente', function (Blueprint $table) {
+        Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('nro_documento');
             $table->string('nombres');
@@ -23,7 +23,7 @@ return new class extends Migration
            
             $table->timestamps();
         });
-        Schema::table('cliente', function ($table) {
+            Schema::table('clientes', function ($table) {
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cliente');
+        Schema::dropIfExists('clientes');
     }
 };
