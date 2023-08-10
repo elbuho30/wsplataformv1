@@ -21,6 +21,9 @@ class ParametrosCrudController extends CrudController
 
     public function setup()
     {
+        if (!backpack_user()->can('Parámetros')) {
+            abort(403);
+        }
         $this->crud->setModel('App\Models\Parametros');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/parametros');
         $this->crud->setEntityNameStrings('parámetro', 'parámetros');

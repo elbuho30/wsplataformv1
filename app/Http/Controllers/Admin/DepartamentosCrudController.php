@@ -21,6 +21,9 @@ class DepartamentosCrudController extends CrudController
 
     public function setup()
     {
+        if (!backpack_user()->can('Departamentos')) {
+            abort(403);
+        }
         $this->crud->setModel('App\Models\Departamentos');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/departamentos');
         $this->crud->setEntityNameStrings('departamento', 'departamentos');
