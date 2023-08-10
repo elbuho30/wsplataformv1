@@ -21,6 +21,9 @@ class CiudadesCrudController extends CrudController
 
     public function setup()
     {
+        if (!backpack_user()->can('Ciudades')) {
+            abort(403);
+        }
         $this->crud->setModel('App\Models\Ciudades');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/ciudades');
         $this->crud->setEntityNameStrings('ciudad', 'ciudades');

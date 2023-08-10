@@ -21,6 +21,9 @@ class PaisesCrudController extends CrudController
 
     public function setup()
     {
+        if (!backpack_user()->can('Países')) {
+            abort(403);
+        }
         $this->crud->setModel('App\Models\Paises');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/paises');
         $this->crud->setEntityNameStrings('país', 'países');

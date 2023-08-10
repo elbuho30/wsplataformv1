@@ -21,6 +21,9 @@ class OficinasCrudController extends CrudController
 
     public function setup()
     {
+        if (!backpack_user()->can('Oficinas')) {
+            abort(403);
+        }
         $this->crud->setModel('App\Models\Oficinas');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/oficinas');
         $this->crud->setEntityNameStrings('oficina', 'oficinas');
